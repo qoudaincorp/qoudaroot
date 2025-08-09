@@ -1,0 +1,112 @@
+/* Ripple view animation */
+.ripple-animation {
+    animation: ripple-effect;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+@keyframes ripple-effect {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 3000px;
+        height: 3000px;
+    }
+}
+
+/* Ripple hide animation */
+.ripple-animation-close {
+    width: 3000px;
+    height: 3000px;
+    animation: ripple-effect-close;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+@keyframes ripple-effect-close {
+    0% {
+        width: 3000px;
+        height: 3000px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+/* Ripple transition component display */
+.ripple-transition-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: none;
+    background-color: #eff2f5;
+    box-shadow: inset 10px 10px 20px #a5a7a9, inset -10px -10px 20px #ffffff;
+    opacity: 0;
+    animation: ripple-child-display;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+@keyframes ripple-child-display {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+    100% {
+        width: 5000px;
+        height: 5000px;
+        opacity: 0;
+    }
+}
+
+.ripple-transition-display:nth-child(1) {
+    animation-delay: 500ms;
+}
+
+.ripple-transition-display:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+/* Ripple transition component hide */
+.ripple-transition-hide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: none;
+    background-color: #eff2f5;
+    box-shadow: inset 10px 10px 20px #a5a7a9, inset -10px -10px 20px #ffffff;
+    opacity: 0;
+    animation: ripple-child-hide;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+@keyframes ripple-child-hide {
+    0% {
+        width: 5000px;
+        height: 5000px;
+        opacity: 0;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.3;
+    }
+}
+
+.ripple-transition-hide:nth-child(1) {
+    animation-delay: 500ms;
+}
+
+.ripple-transition-hide:nth-child(2) {
+    animation-delay: 300ms;
+}
+

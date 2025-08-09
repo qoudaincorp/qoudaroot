@@ -1,0 +1,157 @@
+/**
+* Body smooth scroll behavior
+*/
+html, body {
+    scroll-behavior: smooth;
+}
+
+.textarea-theme-three::-webkit-resizer {
+    border: none;
+    outline: none;
+    background: #92B6E0;
+}
+
+/**
+* Custom scrollbar styles
+*/
+body::-webkit-scrollbar,
+div::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track {
+    background-color: rgba(22,23,31,1);
+}
+
+body::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+    background-color: #4a4e67;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Swiper Slider Pagination Styles */
+.swiper-pagination {
+    padding: 20px !important;
+    position: fixed !important;
+    display: inline-grid !important;
+    justify-content: end !important;
+    height: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .swiper-pagination {
+        display: none !important;
+    }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    width: 15px !important;
+    height: 15px !important;
+    margin-bottom: 20px !important;
+    background: #d3eeff !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet:first-of-type {
+    margin-top: calc(100vh - 290px) !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet:last-of-type {
+    margin-bottom: 0px !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background: #EE302E !important;
+}
+
+/* Preloader animation class */
+.preloader-animation-theme-three {
+    animation-name: preloader_animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes preloader_animation {
+    0% {
+        top: -130%;
+    }
+    50% {
+        top: 0%;
+    }
+    100% {
+        top: -130%;
+    }
+}
+
+.preloader-animation-theme-three-init {
+    animation-name: preloader_animation_init;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes preloader_animation_init {
+    0% {
+        top: 0%;
+    }
+    50% {
+        top: 0%;
+    }
+    100% {
+        top: -130%;
+    }
+}
+
+/* Slide transition animation class */
+.slide-scroll-animation {
+    opacity: 0;
+    animation-name: slide_scroll_animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes slide_scroll_animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.theme-three-pre-loader-transition {
+    animation-name: theme_three_animation_transition;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes theme_three_animation_transition {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+.theme-three-pre-loader-transition:nth-child(1) {
+    animation-delay: 300ms;
+}
+
+.theme-three-pre-loader-transition:nth-child(2) {
+    animation-delay: 600ms;
+}
+
+.theme-three-pre-loader-transition:nth-child(3) {
+    animation-delay: 900ms;
+}
+
+.theme-three-pre-loader-transition:nth-child(4) {
+    animation-delay: 1200ms;
+}
+
+.theme-three-pre-loader-transition:nth-child(5) {
+    animation-delay: 1500ms;
+}
